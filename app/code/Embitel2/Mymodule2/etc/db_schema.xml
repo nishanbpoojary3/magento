@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Created By : MageDelight Pvt. Ltd.
+ */
+-->
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+   
+   <table name="Embitel2_Mymodule2" resource="default" engine="innodb" comment="MD Helloworld">
+   	<column xsi:type="int" name="entity_id" unsigned="false" nullable="false" identity="true" />
+      
+      <column xsi:type="int" name="empid" padding="7" unsigned="false" nullable="false" identity="false" comment="ID" />
+      <column xsi:type="varchar" name="fname" nullable="false" length="20" comment="First Name" />
+      <column xsi:type="varchar" name="lname" nullable="false" length="20" comment="Last Name" />
+      <column xsi:type="varchar" name="email" nullable="false" length="20" comment="Email" />
+      <column xsi:type="varchar" name="mobile" nullable="false" length="255" comment="Mobile Number" />
+      <column xsi:type="varchar" name="cname" nullable="false" length="255" comment="Company Name" />
+      <column xsi:type="varchar" name="department" nullable="false" length="255" comment="Department" />
+      <column xsi:type="varchar" name="occupation" nullable="false" length="255" comment="Occupation" />
+      <column xsi:type="varchar" name="address" nullable="false" length="255" comment="Address" />
+      <column xsi:type="varchar" name="date" nullable="false" length="255" comment="Joining Date" />
+      <column xsi:type="varchar" name="dob" nullable="false" length="255" comment="Date of Birth" />
+      
+      
+      <constraint xsi:type="primary" referenceId="PRIMARY">
+          <column name="entity_id" />
+      </constraint>
+   </table>
+</schema>

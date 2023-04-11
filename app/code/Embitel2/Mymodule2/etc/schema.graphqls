@@ -1,0 +1,35 @@
+type Query {
+    customerData:customerDataOutput @resolver(class:"Embitel2\\Mymodule2\\Model\\Resolver\\CustomerData") 
+    @doc(description:"List of customer details")
+}
+type customerDataOutput {
+                    total_count:Int @doc(description:"total store"),
+                    details:[detailData] @doc(description:"data of customer")
+}
+type detailData {
+   id:Int @doc(description:"The Id"),
+   firstname:String @doc(description:"The FirstName"),  
+   lastname:String @doc(description:"The LastName"),
+   email:String @doc(description:"The Email"),
+   telephone:String @doc(description:"The telephone"),
+   city:String @doc(description:"The city"),
+   state:String @doc(description:"The state"),
+   country:String @doc(description:"The country")
+}
+
+
+type Mutation {
+    addDetails (input: detailsInput! @doc(description:"An input you have to fill")):
+    addDetailsOutput @resolver(class:"Embitel2\\Mymodule2\\Model\\Resolver\\StatusDisplay")
+    @doc(description:"output of mutation")
+}
+
+input detailsInput {
+    groupId:Int! @doc(description:"enter the groupid")
+    groupName:String! @doc(description:"enter the groupName")
+}
+
+type addDetailsOutput {
+    groupId:Int @doc(description:"status of mutation")
+    groupName:String @doc(description:"message of mutation")
+}

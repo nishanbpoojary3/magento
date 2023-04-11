@@ -1,0 +1,36 @@
+{
+    "md_helloworld": {
+        "column": {
+            "id": true,
+            "author_name": true,
+            "email": true,
+            "description": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    },
+    "Embitel2_Mymodule2": {
+        "column": {
+            "id": true,
+            "author_name": true,
+            "email": true,
+            "description": true,
+            "entity_id": true,
+            "empid": true,
+            "fname": true,
+            "lname": true,
+            "mobile": true,
+            "cname": true,
+            "department": true,
+            "occupation": true,
+            "address": true,
+            "date": true,
+            "dob": true
+        },
+        "constraint": {
+            "PRIMARY": true,
+            "EMBITEL2_MYMODULE2_EMPID": true
+        }
+    }
+}

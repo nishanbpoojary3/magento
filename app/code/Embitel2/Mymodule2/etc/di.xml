@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Catalog\Model\Product">
+        <plugin name="afterGetName" type="Embitel2\Mymodule2\Plugin\Product" sortOrder="1" />
+    </type>
+
+     <type name="Magento\Checkout\Model\Cart">
+        <plugin name="beforeAddProduct" type="Embitel2\Mymodule2\Plugin\Cart" sortOrder="1" />
+    </type>
+     <preference for="Magento\Sales\Block\Order\View" type="Embitel2\Mymodule2\Block\Order\View"/>
+    <preference for="Magento\Sales\Model\Order" type="Embitel2\Mymodule2\Model\Order"/>
+    <preference for="Embitel2\Mymodule2\Api\DemoInterface" type="Embitel2\Mymodule2\Model\DemoService"/>
+</config>
