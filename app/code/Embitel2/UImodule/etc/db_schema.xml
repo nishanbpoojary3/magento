@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Created By : MageDelight Pvt. Ltd.
+ */
+-->
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+   
+   <table name="Embitel1_UImodule" resource="default" engine="innodb" comment="UI Sample">
+
+   	<column xsi:type="int" name="entity_id" unsigned="false" nullable="false" identity="true" />
+      
+      <column xsi:type="int" name="empid" padding="7" unsigned="false" nullable="false" identity="false" comment="empid" />
+      <column xsi:type="varchar" name="name" nullable="false" length="20" comment="Name" />
+      <column xsi:type="varchar" name="email" nullable="false" length="20" comment="Email" />
+      <column xsi:type="varchar" name="mobile" nullable="false" length="255" comment="Mobile Number" />
+      <column xsi:type="varchar" name="cname" nullable="false" length="255" comment="Company Name" />
+      <column xsi:type="varchar" name="address" nullable="false" length="255" comment="Address" />
+      <column xsi:type="varchar" name="dob" nullable="false"  comment="Date of Birth" />
+      
+      <constraint xsi:type="primary" referenceId="PRIMARY">
+          <column name="entity_id"/>
+      </constraint>
+      
+      
+      <constraint xsi:type="unique" referenceId="UNIQUE">
+          <column name="empid"/>
+      </constraint>
+   </table>
+</schema>
